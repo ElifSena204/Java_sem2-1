@@ -11,9 +11,29 @@ public class Vehicle {
 	
 	public int getId() {
 		return id;
+		
 	
 	}
 	
-	
+	public void setPrice(float inputPrice) {
+		if(inputPrice > 0 && inputPrice <=100000) {
+			price = inputPrice;
+		}
+		else
+		{
+			
+			
+			price = 1;
+		}
+	}
 
+public void setEType(EnergyType inputEType) {
+	if(inputEType != null) {
+		etype = inputEType;
+	}
+	else
+	{
+		etype = EnergyType.not_specified;
+	}
+}
 }
